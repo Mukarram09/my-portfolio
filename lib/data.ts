@@ -1,22 +1,39 @@
+import { Code, BookUser, Zap, LucideIcon } from "lucide-react";
+
 export interface Project {
   title: string;
+  type: string;
   description: string;
-  tags: string[];
   link: string;
+  tags: string[];
 }
 
-export const projects: Project[] = [
+export interface Service {
+  icon: LucideIcon;
+  title: string;
+}
+
+export const SKILLS = ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Node.js", "TypeScript", "UI/UX", "Git", "Framer Motion", "Vercel"];
+
+export const SERVICES: Service[] = [
+  { icon: Code, title: "Website Development" },
+  { icon: BookUser, title: "Custom UI Solutions" },
+  { icon: Zap, title: "Frontend Optimization" },
+];
+
+export const PROJECTS: Project[] = [
   {
-    title: "Project One",
-    description: "Detailed description of your high-impact work over the last 9 years.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    link: "https://yourlink.com"
+    title: "Project A - React SaaS Platform",
+    type: "Next.js Enterprise Solution",
+    description: "Built a scalable dashboard for data visualization.",
+    link: "#",
+    tags: ["React", "D3.js", "Tailwind"]
   },
   {
-    title: "E-Commerce Engine",
-    description: "High-performance storefront with 99+ Lighthouse scores.",
-    tags: ["Next.js", "Shopify", "Node.js"],
-    link: "#"
-  },
-  // Add more projects here manually as your "admin" update
+    title: "Project B - High-Fidelity E-commerce",
+    type: "Headless Shopify Storefront",
+    description: "Optimized for 99+ Lighthouse performance scores.",
+    link: "#",
+    tags: ["Shopify", "Next.js", "Vercel"]
+  }
 ];

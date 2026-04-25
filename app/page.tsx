@@ -2,6 +2,7 @@
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { Code, BookUser, Zap } from "lucide-react";
+import { PROJECTS, SERVICES, SKILLS } from "@/lib/data";
 
 // --- ANIMATION VARIANTS (Typed for successful Vercel build) ---
 const fadeIn: Variants = {
@@ -49,11 +50,6 @@ const stats = [
   { value: "100+", label: "Projects Completed" },
   { value: "100%", label: "Code Quality" },
   { value: "9+", label: "Years Experience" },
-];
-
-const mockProjects = [
-  { title: "Project A - React SaaS Platform", type: "Next.js Enterprise Solution" },
-  { title: "Project B - High-Fidelity E-commerce", type: "Headless Shopify Storefront" },
 ];
 
 export default function Portfolio() {
@@ -170,27 +166,50 @@ export default function Portfolio() {
       </section>
 
       {/* 5. Projects Section */}
-      <section className="max-w-7xl mx-auto px-6 pb-32">
-        <div className="w-16 h-[2px] bg-rose-600 mb-4 mx-auto" />
-        <motion.h2 
-          initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }} viewport={{ once: true }}
-          className="text-center text-4xl md:text-5xl font-bold tracking-tight mb-16"
-        >
-          Selected Projects
-        </motion.h2>
-
-        <motion.div variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true, amount: 0.3 }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {mockProjects.map((proj) => (
-            <motion.div key={proj.title} variants={slideUp} whileHover={{ y: -5 }} className="bg-zinc-950 border border-zinc-800/40 p-8 rounded-2xl flex flex-col gap-4 group cursor-pointer hover:border-zinc-700 transition">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-zinc-900 text-zinc-400">{proj.type}</span>
+      <section id="projects" className="max-w-7xl mx-auto px-6 py-24 border-t border-zinc-900">
+        <h2 className="text-3xl font-bold mb-12">Latest Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {PROJECTS.map((proj, i) => (
+            <motion.div 
+              key={i} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <div className="aspect-video bg-zinc-900 rounded-xl mb-6 overflow-hidden border border-zinc-800 group-hover:border-rose-600/50 transition-all">
+                {/* Add project images here in the future */}
+                <div className="w-full h-full flex items-center justify-center text-zinc-800 font-bold text-4xl group-hover:scale-110 transition-transform">
+                  0{i + 1}
+                </div>
               </div>
-              <h4 className="text-2xl font-semibold tracking-tight">{proj.title}</h4>
-              <a href="#" className="text-rose-600 text-sm font-medium underline mt-2">View details</a>
+              <p className="text-rose-600 text-xs font-mono mb-2 uppercase tracking-widest">{proj.type}</p>
+              <h3 className="text-2xl font-bold mb-3">{proj.title}</h3>
+              <p className="text-zinc-500 mb-4">{proj.description}</p>
+              <div className="flex gap-2">
+                {proj.tags.map(tag => (
+                  <span key={tag} className="text-[10px] px-2 py-1 bg-zinc-900 border border-zinc-800 text-zinc-400 rounded uppercase">{tag}</span>
+                ))}
+              </div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* 6. Contact Section */}
+      <section id="contact" className="max-w-7xl mx-auto px-6 py-32 text-center">
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+          <h2 className="text-5xl md:text-7xl font-bold mb-8">Ready to start?</h2>
+          <p className="text-zinc-400 text-xl mb-12">I'm currently available for freelance and full-time opportunities.</p>
+          <a href="mailto:your@email.com" className="text-3xl md:text-5xl font-medium text-rose-600 underline underline-offset-8 decoration-1 hover:text-rose-500 transition">
+            hello@macdev-studio.com
+          </a>
         </motion.div>
       </section>
+
+      <footer className="p-12 text-center text-zinc-600 text-sm border-t border-zinc-900">
+        © {new Date().getFullYear()} MacDev-Studio. All rights reserved.
+      </footer>
     </main>
   );
 }
