@@ -1,4 +1,6 @@
 import { Code, BookUser, Zap, LucideIcon } from "lucide-react";
+import { StaticImageData } from "next/image";
+
 import project1 from '@/public/images/factory.png';
 import project2 from '@/public/images/farmiez.png';
 import project3 from '@/public/images/carbid.png';
@@ -9,7 +11,7 @@ export interface Project {
   description: string;
   link: string;
   tags: string[];
-  image: string;
+  image: string | StaticImageData;
 }
 
 export interface Service {
