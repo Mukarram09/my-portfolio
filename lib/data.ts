@@ -1,4 +1,7 @@
 import { Code, BookUser, Zap, LucideIcon } from "lucide-react";
+import project1 from '@/public/images/factory.png';
+import project2 from '@/public/images/farmiez.png';
+import project3 from '@/public/images/carbid.png';
 
 export interface Project {
   title: string;
@@ -23,17 +26,27 @@ export const SERVICES: Service[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: "Project A - React SaaS Platform",
+    title: "Project 1 - Factory Marketplace Platform",
     type: "Next.js Enterprise Solution",
     description: "Built a scalable dashboard for data visualization.",
     link: "#",
-    tags: ["React", "D3.js", "Tailwind"]
+    tags: ["React", "D3.js", "Tailwind"],
+    image: project1,
   },
   {
-    title: "Project B - High-Fidelity E-commerce",
+    title: "Project 2 - Farmiez Marketplace Platform",
     type: "Headless Shopify Storefront",
     description: "Optimized for 99+ Lighthouse performance scores.",
     link: "#",
-    tags: ["Shopify", "Next.js", "Vercel"]
+    tags: ["Shopify", "Next.js", "Vercel"],
+    image: project2,
+  },
+  {
+    title: "Project 2 - Carbid Marketplace Platform",
+    type: "Headless Shopify Storefront",
+    description: "Optimized for 99+ Lighthouse performance scores.",
+    link: "#",
+    tags: ["Shopify", "Next.js", "Vercel"],
+    image: project3,
   }
 ];

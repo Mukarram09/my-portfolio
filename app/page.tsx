@@ -30,7 +30,7 @@ const techMarquee: Variants = {
       x: { 
         repeat: Infinity, 
         repeatType: "loop", 
-        duration: 12, 
+        duration: 48, 
         ease: "linear" 
       },
     },
@@ -179,8 +179,9 @@ export default function Portfolio() {
             >
               <div className="aspect-video bg-zinc-900 rounded-xl mb-6 overflow-hidden border border-zinc-800 group-hover:border-rose-600/50 transition-all">
                 {/* Add project images here in the future */}
-                <div className="w-full h-full flex items-center justify-center text-zinc-800 font-bold text-4xl group-hover:scale-110 transition-transform">
-                  0{i + 1}
+                <div className="relative w-full h-full flex items-center justify-center text-zinc-800 font-bold text-4xl group-hover:scale-110 transition-transform">
+                  {/*0{i + 1}*/}
+                  <Image src={proj.image} alt="project image" fill className="object-cover" priority/>
                 </div>
               </div>
               <p className="text-rose-600 text-xs font-mono mb-2 uppercase tracking-widest">{proj.type}</p>
