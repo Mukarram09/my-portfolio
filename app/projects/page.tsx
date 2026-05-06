@@ -3,7 +3,12 @@ import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import Link from "next/link";
 import { PROJECTS } from "@/lib/data";
-import { ArrowLeft, ExternalLink, Github, Layers } from "lucide-react";
+import { 
+  ArrowLeft, 
+  ExternalLink, 
+  // Github, 
+  Layers 
+} from "lucide-react";
 
 // --- ANIMATION VARIANTS ---
 const fadeIn: Variants = {
