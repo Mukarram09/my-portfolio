@@ -8,6 +8,7 @@ import project3 from '@/public/images/carbid.png';
 export interface Project {
   title: string;
   type: string;
+  category: string;
   description: string;
   link: string;
   tags: string[];
