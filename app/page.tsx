@@ -61,7 +61,9 @@ export default function Portfolio() {
         variants={fadeIn} initial="initial" animate="animate"
         className="max-w-7xl mx-auto flex items-center justify-between p-6 py-8"
       >
-        <span className="text-xl font-bold tracking-tight">MacDev-Studio</span>
+        <span className="text-xl font-bold tracking-tight">
+          <img src="/images/logo1.png" className="h-[60px]" />
+        </span>
         <div className="flex gap-10 text-sm font-medium text-zinc-300">
           {["Home", "About", "Projects", "Contact"].map(item => (
             <motion.a 
