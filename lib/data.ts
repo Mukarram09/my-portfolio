@@ -8,11 +8,11 @@ import project3 from '@/public/images/carbid.png';
 export interface Project {
   title: string;
   type: string;
-  category: string;
+  category: string; // <-- TypeScript requires this now
   description: string;
   link: string;
   tags: string[];
-  image: string | StaticImageData;
+  image?: StaticImageData | string | any; // Make it optional with '?' or allow any if you are still testing
 }
 
 export interface Service {
@@ -32,6 +32,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Project 1 - Factory Marketplace Platform",
     type: "Next.js Enterprise Solution",
+    category: "Next.js", // <-- ADD THIS LINE to fix the error
     description: "Built a scalable dashboard for data visualization.",
     link: "#",
     tags: ["React", "D3.js", "Tailwind"],
@@ -40,6 +41,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Project 2 - Farmiez Marketplace Platform",
     type: "Headless Shopify Storefront",
+    category: "E-commerce", // <-- ADD THIS LINE
     description: "Optimized for 99+ Lighthouse performance scores.",
     link: "#",
     tags: ["Shopify", "Next.js", "Vercel"],
@@ -48,6 +50,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Project 2 - Carbid Marketplace Platform",
     type: "Headless Shopify Storefront",
+    category: "E-commerce", // <-- ADD THIS LINE
     description: "Optimized for 99+ Lighthouse performance scores.",
     link: "#",
     tags: ["Shopify", "Next.js", "Vercel"],
