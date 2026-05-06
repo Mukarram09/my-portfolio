@@ -3,6 +3,7 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { Code, BookUser, Zap } from "lucide-react";
 import { PROJECTS, SERVICES, SKILLS } from "@/lib/data";
+import Link from "next/link";
 
 // --- ANIMATION VARIANTS (Typed for successful Vercel build) ---
 const fadeIn: Variants = {
@@ -61,11 +62,11 @@ export default function Portfolio() {
         variants={fadeIn} initial="initial" animate="animate"
         className="max-w-7xl mx-auto flex items-center justify-between p-6 py-8"
       >
-        <span className="text-xl font-bold tracking-tight">
-          <img src="/images/logo1.png" className="h-[60px]" />
-        </span>
+        <Link href="/" className="text-xl font-bold tracking-tight">
+          <img src="/images/logo1.png" className="h-[50px]" />
+        </Link>
         <div className="flex gap-10 text-sm font-medium text-zinc-300">
-          {["Home", "About", "Projects", "Contact"].map(item => (
+          {/*{["Home", "About", "Projects", "Contact"].map(item => (
             <motion.a 
               key={item} 
               href="#" 
@@ -74,7 +75,11 @@ export default function Portfolio() {
             >
               {item}
             </motion.a>
-          ))}
+          ))}*/}
+          <Link href="/" className="hover:text-white transition">Home</Link>
+          <Link href="/about" className="hover:text-white transition">About</Link>
+          <Link href="/projects" className="hover:text-white transition">Projects</Link>
+          <Link href="/contact" className="hover:text-white transition">Contact</Link>
         </div>
       </motion.nav>
 
@@ -99,12 +104,30 @@ export default function Portfolio() {
           </p>
 
           <div className="flex gap-4">
-            <motion.button whileHover={{ scale: 1.05 }} className="bg-rose-600 text-white font-semibold text-sm px-7 py-3 rounded-md hover:bg-rose-700 transition">
+            {/*<motion.button whileHover={{ scale: 1.05 }} className="bg-rose-600 text-white font-semibold text-sm px-7 py-3 rounded-md hover:bg-rose-700 transition">
               Discuss a project?
-            </motion.button>
-            <motion.button whileHover={{ scale: 1.05, borderColor: '#fff' }} className="border border-zinc-700 text-white font-semibold text-sm px-7 py-3 rounded-md hover:border-zinc-500 transition">
+            </motion.button>*/}
+            <Link href="/contact">
+              <motion.button 
+                whileHover={{ scale: 1.05 }} 
+                className="bg-rose-600 text-white font-semibold text-sm px-7 py-3 rounded-md hover:bg-rose-700 transition"
+              >
+                Discuss a project?
+              </motion.button>
+            </Link>
+
+            {/*<motion.button whileHover={{ scale: 1.05, borderColor: '#fff' }} className="border border-zinc-700 text-white font-semibold text-sm px-7 py-3 rounded-md hover:border-zinc-500 transition">
               My resume
-            </motion.button>
+            </motion.button>*/}
+
+            <motion.a 
+              href="/MukarramLatestResume.pdf" 
+              download="MacDev-Studio-Resume.pdf" // This forces download and sets the default filename
+              whileHover={{ scale: 1.05, borderColor: '#fff' }} 
+              className="border border-zinc-700 text-white font-semibold text-sm px-7 py-3 rounded-md hover:border-zinc-500 transition flex items-center justify-center"
+            >
+              My resume
+            </motion.a>
           </div>
         </motion.div>
 
