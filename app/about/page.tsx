@@ -237,7 +237,7 @@ export default function AboutPage() {
               <GraduationCap className="w-4 h-4" /> Education
             </motion.h2>
 
-            <motion.div variants={slideUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="bg-zinc-900/30 border border-zinc-800/50 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+            {/*<motion.div variants={slideUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="bg-zinc-900/30 border border-zinc-800/50 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
               <div>
                 <h3 className="font-bold text-zinc-100 text-lg mb-1">BA — Bachelor Of Arts</h3>
                 <p className="text-zinc-500 text-sm">Chaudhary Charan Singh University</p>
@@ -246,7 +246,7 @@ export default function AboutPage() {
                 <span className="text-rose-600 font-mono text-sm font-semibold">2015</span>
                 <p className="text-zinc-500 text-xs mt-1">CGPA 7.68/10</p>
               </div>
-            </motion.div>
+            </motion.div>*/}
 
             <motion.div variants={slideUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="bg-zinc-900/30 border border-zinc-800/50 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <div>
