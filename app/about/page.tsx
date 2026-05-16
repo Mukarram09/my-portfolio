@@ -34,23 +34,23 @@ const staggerContainer: Variants = {
 // --- DATA ---
 const EXPERIENCE = [
   {
-    year: "2022 — Present",
+    year: "2025 — Present",
     role: "Lead Frontend Engineer / Founder",
-    company: "MacDev-Studio",
+    company: "MacDev9-Studio",
     description: "Architecting high-performance digital experiences. Specializing in Next.js, React, and Framer Motion for premium web applications and scalable e-commerce brand identities.",
     icon: Code2
   },
   {
-    year: "2018 — 2022",
+    year: "2018 — Present",
     role: "Senior Full Stack Developer",
-    company: "Tech Agency",
+    company: "Adware Technologies Pvt Ltd",
     description: "Spearheaded complex web platforms utilizing the MERN stack. Mentored junior developers and established UI/UX best practices.",
     icon: Terminal
   },
   {
-    year: "2015 — 2018",
+    year: "2017 — Present",
     role: "Frontend Developer",
-    company: "Digital Startup",
+    company: "Adware Technologies Pvt Ltd",
     description: "Began the journey crafting responsive interfaces. Mastered the fundamentals of HTML, CSS, JavaScript, and bridging the gap between design and engineering.",
     icon: Briefcase
   }
@@ -87,7 +87,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[#080808] text-white selection:bg-rose-600/30 font-sans pb-32">
       
       {/* 1. Header (Navbar) */}
-      <motion.nav 
+      {/*<motion.nav 
         variants={fadeIn} initial="initial" animate="animate"
         className="max-w-7xl mx-auto flex items-center justify-between p-6 py-8"
       >
@@ -95,26 +95,17 @@ export default function AboutPage() {
           <img src="/images/logo1.png" className="h-[50px]" />
         </Link>
         <div className="flex gap-10 text-sm font-medium text-zinc-300">
-          {/*{["Home", "About", "Projects", "Contact"].map(item => (
-            <motion.a 
-              key={item} 
-              href="#" 
-              whileHover={{ y: -1, textShadow: "0px 0px 8px #fff" }} 
-              className="hover:text-white transition"
-            >
-              {item}
-            </motion.a>
-          ))}*/}
           <Link href="/" className="hover:text-white transition">Home</Link>
+          <Link href="/my_portfolio" className="hover:text-white transition">Portfolio</Link>
           <Link href="/about" className="hover:text-white transition">About</Link>
           <Link href="/projects" className="hover:text-white transition">Projects</Link>
           <Link href="/contact" className="hover:text-white transition">Contact</Link>
         </div>
-      </motion.nav>  
+      </motion.nav>*/}  
 
 
       {/* Navbar */}
-      <nav className="max-w-5xl mx-auto p-6 py-8">
+      <nav className="max-w-5xl mx-auto p-6 py-8 pt-32">
         <Link 
           href="/" 
           className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 hover:text-white transition group"
@@ -246,13 +237,24 @@ export default function AboutPage() {
               <GraduationCap className="w-4 h-4" /> Education
             </motion.h2>
 
-            <motion.div variants={slideUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="bg-zinc-900/30 border border-zinc-800/50 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <motion.div variants={slideUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="bg-zinc-900/30 border border-zinc-800/50 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
               <div>
-                <h3 className="font-bold text-zinc-100 text-lg mb-1">B.Tech — Computer Science</h3>
-                <p className="text-zinc-500 text-sm">West Bengal University of Technology</p>
+                <h3 className="font-bold text-zinc-100 text-lg mb-1">BA — Bachelor Of Arts</h3>
+                <p className="text-zinc-500 text-sm">Chaudhary Charan Singh University</p>
               </div>
               <div className="text-right">
-                <span className="text-rose-600 font-mono text-sm font-semibold">2019</span>
+                <span className="text-rose-600 font-mono text-sm font-semibold">2015</span>
+                <p className="text-zinc-500 text-xs mt-1">CGPA 7.68/10</p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={slideUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="bg-zinc-900/30 border border-zinc-800/50 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <div>
+                <h3 className="font-bold text-zinc-100 text-lg mb-1">MCA — Computer Science</h3>
+                <p className="text-zinc-500 text-sm">Indira Gandhi National Open University</p>
+              </div>
+              <div className="text-right">
+                <span className="text-rose-600 font-mono text-sm font-semibold">2025</span>
                 <p className="text-zinc-500 text-xs mt-1">CGPA 7.68/10</p>
               </div>
             </motion.div>

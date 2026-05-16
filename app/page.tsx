@@ -58,7 +58,7 @@ export default function Portfolio() {
     <main className="min-h-screen bg-[#080808] text-white selection:bg-rose-600/30 font-sans">
       
       {/* 1. Header (Navbar) */}
-      <motion.nav 
+      {/*<motion.nav 
         variants={fadeIn} initial="initial" animate="animate"
         className="max-w-7xl mx-auto flex items-center justify-between p-6 py-8"
       >
@@ -66,25 +66,16 @@ export default function Portfolio() {
           <img src="/images/logo1.png" className="h-[50px]" />
         </Link>
         <div className="flex gap-10 text-sm font-medium text-zinc-300">
-          {/*{["Home", "About", "Projects", "Contact"].map(item => (
-            <motion.a 
-              key={item} 
-              href="#" 
-              whileHover={{ y: -1, textShadow: "0px 0px 8px #fff" }} 
-              className="hover:text-white transition"
-            >
-              {item}
-            </motion.a>
-          ))}*/}
           <Link href="/" className="hover:text-white transition">Home</Link>
+          <Link href="/my_portfolio" className="hover:text-white transition">Portfolio</Link>
           <Link href="/about" className="hover:text-white transition">About</Link>
           <Link href="/projects" className="hover:text-white transition">Projects</Link>
           <Link href="/contact" className="hover:text-white transition">Contact</Link>
         </div>
-      </motion.nav>
+      </motion.nav>*/}
 
       {/* 2. Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-16 py-16">
+      <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-16 py-16 pt-32">
         
         <motion.div variants={slideUp} initial="initial" animate="animate">
           <motion.p variants={fadeIn} className="text-3xl font-medium tracking-tight mb-3">
@@ -95,7 +86,7 @@ export default function Portfolio() {
             <div className="w-16 h-[2px] bg-rose-600 mt-2" />
             <h1 className="text-5xl md:text-6xl font-bold tracking-tighter leading-tight">
               I’m a seasoned<br/>
-              <span className="text-rose-600">Frontend Developer</span>
+              <span className="text-rose-600">Web/Mobile App Developer</span>
             </h1>
           </div>
 
@@ -110,7 +101,7 @@ export default function Portfolio() {
             <Link href="/contact">
               <motion.button 
                 whileHover={{ scale: 1.05 }} 
-                className="bg-rose-600 text-white font-semibold text-sm px-7 py-3 rounded-md hover:bg-rose-700 transition"
+                className="bg-rose-600 text-white font-semibold text-sm px-4 md:px-7 py-3 rounded-md hover:bg-rose-700 transition"
               >
                 Discuss a project?
               </motion.button>
@@ -121,10 +112,11 @@ export default function Portfolio() {
             </motion.button>*/}
 
             <motion.a 
-              href="/MukarramLatestResume.pdf" 
-              download="MacDev-Studio-Resume.pdf" // This forces download and sets the default filename
+              // href="/MukarramLatestResume.pdf" 
+              href="#" 
+              // download="MacDev-Studio-Resume.pdf"
               whileHover={{ scale: 1.05, borderColor: '#fff' }} 
-              className="border border-zinc-700 text-white font-semibold text-sm px-7 py-3 rounded-md hover:border-zinc-500 transition flex items-center justify-center"
+              className="border border-zinc-700 text-white font-semibold text-sm px-4 md:px-7 py-3 rounded-md hover:border-zinc-500 transition flex items-center justify-center"
             >
               My resume
             </motion.a>

@@ -31,36 +31,8 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#080808] text-white selection:bg-rose-600/30 font-sans pb-32">
       
-      {/* 1. Header (Navbar) */}
-      <motion.nav 
-        variants={fadeIn} initial="initial" animate="animate"
-        className="max-w-7xl mx-auto flex items-center justify-between p-6 py-8"
-      >
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          <img src="/images/logo1.png" className="h-[50px]" />
-        </Link>
-        
-        <div className="flex gap-10 text-sm font-medium text-zinc-300">
-          {/*{["Home", "About", "Projects", "Contact"].map(item => (
-            <motion.a 
-              key={item} 
-              href="#" 
-              whileHover={{ y: -1, textShadow: "0px 0px 8px #fff" }} 
-              className="hover:text-white transition"
-            >
-              {item}
-            </motion.a>
-          ))}*/}
-          <Link href="/" className="hover:text-white transition">Home</Link>
-          <Link href="/about" className="hover:text-white transition">About</Link>
-          <Link href="/projects" className="hover:text-white transition">Projects</Link>
-          <Link href="/contact" className="hover:text-white transition">Contact</Link>
-        </div>
-      </motion.nav> 
-
-
       {/* Navbar */}
-      <nav className="max-w-6xl mx-auto p-6 py-8">
+      <nav className="max-w-6xl mx-auto p-6 py-8 pt-32">
         <Link 
           href="/" 
           className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 hover:text-white transition group"
